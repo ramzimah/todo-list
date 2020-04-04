@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 
 
 var app = express();
+app.use(express.static('public'));
 var todoItems = ["hi", "cv"];
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
