@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 
 var app = express();
 app.use(express.static('public'));
-var todoItems = ["hi", "cv"];
+var todoItems = [];
 app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -28,6 +28,7 @@ app.post("/", function (req, res) {
     console.log(todoItem);
     res.redirect("/");
 });
+app.get("/work")
 
 app.listen(3000, function () {
     console.log("app started");
